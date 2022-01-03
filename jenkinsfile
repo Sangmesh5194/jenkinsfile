@@ -1,0 +1,23 @@
+pipeline {
+ agent any
+  stages {
+   stage ('build') {
+    step {
+     sh '''
+      #!/bin/bash
+       echo "this is first build stage in jenkinsfile"
+       '''
+         }
+       }
+         stage ('test') {
+          step {
+          sh ' echo "second test stage in jenkinsfile"'
+           }
+          }
+             stage ('deploy') {
+             stage {
+             sh ' echo "third deploy stage in jenkins"
+             }
+             }
+   }
+ }  
