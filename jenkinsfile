@@ -2,7 +2,7 @@ pipeline {
  agent any
   stages {
    stage ('build') {
-    step {
+    steps {
      sh '''
       #!/bin/bash
        echo "this is first build stage in jenkinsfile"
@@ -10,12 +10,12 @@ pipeline {
          }
        }
          stage ('test') {
-          step {
+          steps {
           sh ' echo "second test stage in jenkinsfile"'
            }
           }
              stage ('deploy') {
-             stage {
+             steps {
              sh ' echo "third deploy stage in jenkins"
              }
              }
