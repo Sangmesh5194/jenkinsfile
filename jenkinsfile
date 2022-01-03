@@ -11,12 +11,12 @@ pipeline {
        }
          stage ('test') {
           steps {
-          sh ' echo "second test stage in jenkinsfile"'
+          sh 'echo "second test stage in jenkinsfile"'
            }
           }
              stage ('deploy') {
              steps {
-             sh ' echo "third deploy stage in jenkins"
+             sh 'echo "third deploy stage in jenkins"
              }
              }
    }
