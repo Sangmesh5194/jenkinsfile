@@ -6,7 +6,7 @@ pipeline {
      sh '''
       #!/bin/bash
        echo "this is first build stage in jenkinsfile"
-       '''
+        '''
          }
        }
          stage ('test') {
@@ -16,7 +16,7 @@ pipeline {
           }
              stage ('deploy') {
              steps {
-             sh 'echo "third deploy stage in jenkins"
+             sh 'echo "third deploy stage in jenkins"'
              }
              }
    }
